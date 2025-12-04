@@ -1,11 +1,11 @@
 return {
 	"petertriho/nvim-scrollbar",
 	enabled = true,
-    event = "BufReadPost",
+	event = "BufReadPost",
 	opts = {
 		handlers = {
 			gitsigns = true,
 		},
-        priority = 100,
+		priority = 100,
 	},
 }

@@ -6,9 +6,11 @@ set --prepend GOPATH "$HOME/go"
 ## Config
 set -x EDITOR nvim
 set -x XDG_CONFIG_HOME $HOME/.config
+fish_config theme choose "Catppuccin Mocha"
 
 ## Alias
 alias rm="trash" # Safe delete
+alias k="kubectl"
 
 
 ## Commands to run in interactive sessions can go here
@@ -108,6 +110,15 @@ function fish_prompt
     set -l pwd (prompt_pwd)
 
     echo -n -s $prompt_host $cwd $pwd $normal ' ' $delim ' '
+end
+
+
+## Fuzzy find cd
+function fcd
+    set -l dir (find ~ -type d 2>/dev/null | fzf --preview 'exa --tree --level=1 {} || ls -l {}')
+    if test $status = 0
+        cd "$dir"
+    end
 end
 
 

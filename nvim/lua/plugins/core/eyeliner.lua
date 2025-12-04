@@ -1,7 +1,7 @@
 return {
 	"jinh0/eyeliner.nvim",
 	enabled = true,
-    event = "BufReadPost",
+	event = "BufReadPost",
 	opts = {
 		highlight_on_key = false,
 		dim = false,

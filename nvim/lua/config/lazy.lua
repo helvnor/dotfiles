@@ -18,17 +18,16 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local spec = {
+	{ import = "plugins.core" },
+}
+
+if not Is_minimal then
+	table.insert(spec, { import = "plugins.full" })
+end
+
 require("lazy").setup({
-	spec = {
-		{
-			"williamboman/mason.nvim",
-            cmd = "Mason",
-			opts = {},
-		},
-		{
-			import = "plugins",
-		},
-	},
-	install = { colorscheme = { "gruvbox" } },
+	spec = spec,
+	install = { colorscheme = { "catppuccin" } },
 	checker = { enabled = true },
 })

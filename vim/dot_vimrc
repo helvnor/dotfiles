@@ -1,10 +1,7 @@
 "" Keybindings 
 set mouse=
 let mapleader = " "
-
-" Buffer navigation
-nnoremap <S-h> :bprevious<CR>
-nnoremap <S-l> :bnext<CR>
+map <F1> <nop>
 
 " Window arrangement: Leader->Ctrl-[h,j,k,l]
 nnoremap <C-h> <C-W>h      " Navigate to left window
@@ -19,10 +16,10 @@ nnoremap <leader><C-k> <C-W><S-k> " Move window up
 nnoremap <leader><C-l> <C-W><S-l> " Move window right
 
 " Window resize: Leader->[h,j,k,l]
-nnoremap <leader>h <C-W><   " Resize window left
-nnoremap <leader>j <C-W>+   " Resize window down
-nnoremap <leader>k <C-W>-   " Resize window up
-nnoremap <leader>l <C-W>>   " Resize window right
+nnoremap <leader>h <C-W>5<   " Resize window left
+nnoremap <leader>j <C-W>5+   " Resize window down
+nnoremap <leader>k <C-W>5-   " Resize window up
+nnoremap <leader>l <C-W>5>   " Resize window right
 
 " Tab management: Leader->t...
 nnoremap <leader>tn :tabnew<CR>       " Create new tab
@@ -37,6 +34,8 @@ nnoremap <leader>tm2 :tabmove 2<CR>   " Move tab to position 2
 nnoremap <leader>tm3 :tabmove 3<CR>   " Move tab to position 3
 nnoremap <leader>tm4 :tabmove 4<CR>   " Move tab to position 4
 nnoremap <leader>tm5 :tabmove 5<CR>   " Move tab to position 5
+nnoremap <S-h> :tabprevious<CR>       " Go to previous tab
+nnoremap <S-l> :tabnext<CR>           " Go to next tab
 
 " Copy and paste to clipboard
 vnoremap <leader>cy "+y
@@ -90,3 +89,8 @@ set termguicolors
 set background=dark
 color slate
 
+
+"" Spell check for txt and md files
+set spelllang=en_gb
+autocmd FileType markdown setlocal spell
+autocmd FileType text setlocal spell

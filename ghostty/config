@@ -1,30 +1,9 @@
-# Gruvbox theme
-background = #282828
-foreground = #ebdbb2
-selection-background = #ebdbb2
-selection-foreground = #282828
-cursor-color = #ebdbb2
-cursor-text = #282828
-palette = 0=#282828
-palette = 1=#cc241d
-palette = 2=#98971a
-palette = 3=#d79921
-palette = 4=#458588
-palette = 5=#b16286
-palette = 6=#689d6a
-palette = 7=#a89984
-palette = 8=#928374
-palette = 9=#fb4934
-palette = 10=#b8bb26
-palette = 11=#fabd2f
-palette = 12=#83a598
-palette = 13=#d3869b
-palette = 14=#8ec07c
-palette = 15=#ebdbb2
+# Theme
+theme = Catppuccin Mocha
 
 # Background blur
-background-opacity = 0.85
-background-blur-radius = 40
+background-opacity = 0.95
+background-blur-radius = true
 
 # Font
 font-size = 11
@@ -35,6 +14,7 @@ gtk-titlebar = false
 title = ghostty
 window-decoration = true
 quit-after-last-window-closed = true
+macos-option-as-alt = false
 
 # Autostart
 command = /run/current-system/sw/bin/fish
