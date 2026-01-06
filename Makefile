@@ -74,9 +74,9 @@ fish:
 			echo '[Fish] Existing config moved to ~/.config/fish_bak.'; \
 		fi; \
 		ln -s $(shell pwd)/fish $(HOME)/.config/fish; \
-		echo '[Fish] Done.'; \
+		echo '[Fish] Done. Set to default shell with "chsh -s $(which fish)"'; \
+		@chsh -s $(which fish)
 	fi
-	@chsh -s $(which fish)
 
 
 # Unlink
@@ -119,5 +119,4 @@ fish_unlink:
 	else \
 		echo '[Fish] Not linked.'; \
 	fi
-	@chsh -s $(which bash)
 
