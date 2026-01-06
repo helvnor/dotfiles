@@ -75,7 +75,6 @@ fish:
 		fi; \
 		ln -s $(shell pwd)/fish $(HOME)/.config/fish; \
 		echo '[Fish] Done. Set to default shell with "chsh -s $(which fish)"'; \
-		@chsh -s $(which fish)
 	fi
 
 
