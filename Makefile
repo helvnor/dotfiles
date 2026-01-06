@@ -76,6 +76,8 @@ fish:
 		ln -s $(shell pwd)/fish $(HOME)/.config/fish; \
 		echo '[Fish] Done.'; \
 	fi
+	@chsh -s $(which fish)
+
 
 # Unlink
 nvim_unlink:
@@ -117,4 +119,5 @@ fish_unlink:
 	else \
 		echo '[Fish] Not linked.'; \
 	fi
+	@chsh -s $(which bash)
 
