@@ -9,9 +9,9 @@ set -x XDG_CONFIG_HOME $HOME/.config
 fish_config theme choose "Catppuccin Mocha"
 
 ## Alias
-alias rm="trash" # Safe delete
+alias rm="trash"
 alias k="kubectl"
-
+alias kn="kubectl config set-context --current --namespace="
 
 ## Commands to run in interactive sessions can go here
 if status is-interactive

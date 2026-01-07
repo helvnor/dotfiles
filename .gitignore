@@ -4,7 +4,3 @@
 # nvim
 **/lazy-lock.json
 **/.luarc.json
-
-
-# script
-push.sh
