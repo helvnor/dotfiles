@@ -11,7 +11,7 @@ fish_config theme choose "Catppuccin Mocha"
 ## Alias
 alias rm="trash"
 alias k="kubectl"
-abbr -a kn 'kubectl config set-context --current --namespace='
+abbr -a kn 'kubectl config set-context --current --namespace'
 
 ## Commands to run in interactive sessions can go here
 if status is-interactive
