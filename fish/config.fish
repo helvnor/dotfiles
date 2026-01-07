@@ -6,7 +6,29 @@ set --prepend GOPATH "$HOME/go"
 ## Config
 set -x EDITOR nvim
 set -x XDG_CONFIG_HOME $HOME/.config
-fish_config theme choose "Catppuccin Mocha"
+
+# Catppuccin Mocha Palette
+set -g fish_color_normal cdd6f4
+set -g fish_color_command 89b4fa
+set -g fish_color_keyword f38ba8
+set -g fish_color_quote a6e3a1
+set -g fish_color_redirection f5c2e7
+set -g fish_color_end fab387
+set -g fish_color_error f38ba8
+set -g fish_color_param f2cdcd
+set -g fish_color_comment 7f849c
+set -g fish_color_selection --background=313244
+set -g fish_color_search_match --background=313244
+set -g fish_color_operator 94e2d5
+set -g fish_color_escape f5c2e7
+set -g fish_color_autosuggestion 6c7086
+set -g fish_color_cancel f38ba8
+set -g fish_color_cwd f9e2af
+set -g fish_color_user 94e2d5
+set -g fish_color_host 89b4fa
+set -g fish_color_host_remote a6e3a1
+set -g fish_color_status f38ba8
+set -g fish_color_progress f5c2e7
 
 ## Alias
 alias rm="trash"
