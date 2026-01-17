@@ -41,7 +41,6 @@ return {
 		"cssls", -- CSS
 		"dockerls", -- Docker
 		"gopls", -- Go
-		"golangci_lint_ls", -- Go Lint
 		"rust_analyzer", -- Rust
 		"clangd", -- C/C++
 		"html", -- HTML
