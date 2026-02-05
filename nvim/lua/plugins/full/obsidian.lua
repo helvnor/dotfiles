@@ -19,7 +19,7 @@ return {
 				["/"] = { char = "󰡖", hl_group = "ObsidianRefersTo" },
 				["x"] = { char = "", hl_group = "ObsidianDone" },
 				["-"] = { char = "󰅖", hl_group = "ObsidianCancelled" },
-				[">"] = { char = "", hl_group = "ObsidianRightArrow" },
+				[">"] = { char = "", hl_group = "ObsidianRightArrow" },
 				["<"] = { char = "", hl_group = "ObsidianLeftArrow" },
 
 				-- Extras
@@ -73,29 +73,29 @@ return {
 		require("obsidian").setup(opts)
 		local hl = vim.api.nvim_set_hl
 
-		hl(0, "ObsidianTodo", { fg = "#cdd6f4" }) -- Text (Off-white)
-		hl(0, "ObsidianRefersTo", { fg = "#94e2d5" }) -- Teal
-		hl(0, "ObsidianDone", { fg = "#a6e3a1" }) -- Green (Matches checkbox)
+		hl(0, "ObsidianTodo", { fg = "#cdd6f4" })
+		hl(0, "ObsidianRefersTo", { fg = "#f9e2af" })
+		hl(0, "ObsidianDone", { fg = "#a6e3a1" })
 		hl(0, "ObsidianCancelled", { fg = "#45475a" })
-		hl(0, "ObsidianRightArrow", { fg = "#89b4fa" }) -- Blue
-		hl(0, "ObsidianLeftArrow", { fg = "#cba6f7" }) -- Mauve (Purple)
+		hl(0, "ObsidianRightArrow", { fg = "#45475a" })
+		hl(0, "ObsidianLeftArrow", { fg = "#45475a" })
 
 		-- Extras
-		hl(0, "ObsidianQuestion", { fg = "#89dceb" }) -- Sky
-		hl(0, "ObsidianImportant", { fg = "#fab387" }) -- Peach
-		hl(0, "ObsidianStar", { fg = "#f9e2af" }) -- Yellow
-		hl(0, "ObsidianQuote", { fg = "#a6e3a1" }) -- Green
-		hl(0, "ObsidianLocation", { fg = "#f38ba8" }) -- Red
-		hl(0, "ObsidianBookmark", { fg = "#fab387" }) -- Peach
-		hl(0, "ObsidianInfo", { fg = "#89dceb" }) -- Sky
-		hl(0, "ObsidianSavings", { fg = "#a6e3a1" }) -- Green
-		hl(0, "ObsidianIdea", { fg = "#f9e2af" }) -- Yellow
-		hl(0, "ObsidianProp", { fg = "#a6e3a1" }) -- Green
-		hl(0, "ObsidianCon", { fg = "#fab387" }) -- Peach
-		hl(0, "ObsidianFire", { fg = "#eba0ac" }) -- Flamingo (Soft Red)
-		hl(0, "ObsidianKey", { fg = "#f9e2af" }) -- Yellow
-		hl(0, "ObsidianWin", { fg = "#cba6f7" }) -- Mauve (Purple)
-		hl(0, "ObsidianUp", { fg = "#a6e3a1" }) -- Green
-		hl(0, "ObsidianDown", { fg = "#f38ba8" }) -- Red
+		hl(0, "ObsidianQuestion", { fg = "#89dceb" })
+		hl(0, "ObsidianImportant", { fg = "#fab387" })
+		hl(0, "ObsidianStar", { fg = "#f9e2af" })
+		hl(0, "ObsidianQuote", { fg = "#a6e3a1" })
+		hl(0, "ObsidianLocation", { fg = "#f38ba8" })
+		hl(0, "ObsidianBookmark", { fg = "#fab387" })
+		hl(0, "ObsidianInfo", { fg = "#89dceb" })
+		hl(0, "ObsidianSavings", { fg = "#a6e3a1" })
+		hl(0, "ObsidianIdea", { fg = "#f9e2af" })
+		hl(0, "ObsidianProp", { fg = "#a6e3a1" })
+		hl(0, "ObsidianCon", { fg = "#fab387" })
+		hl(0, "ObsidianFire", { fg = "#eba0ac" })
+		hl(0, "ObsidianKey", { fg = "#f9e2af" })
+		hl(0, "ObsidianWin", { fg = "#cba6f7" })
+		hl(0, "ObsidianUp", { fg = "#a6e3a1" })
+		hl(0, "ObsidianDown", { fg = "#f38ba8" })
 	end,
 }

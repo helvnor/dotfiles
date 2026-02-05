@@ -118,7 +118,9 @@ if not Is_minimal then
 	Keymap("<leader>ow", ":ObsidianWorkspace<CR>", "Obsidian: Workspace")
 	Keymap("<leader>oh", ":ObsidianQuickSwitch 0<CR>", "Obsidian: Home")
 	Keymap("<leader>ob", ":ObsidianBacklink<CR>", "Obsidian: Backlinks")
-	Keymap("<leader>ox", ":ObsidianToggleCheckbox<CR>", "Obsidian: Toggle Checkbox")
+	Keymap("<leader>ox", function()
+		require("obsidian").util.toggle_checkbox({ " ", "x" })
+	end, "Obsidian: Toggle Todo/Done only")
 	Keymap("<leader>oe", ":ObsidianExtractNote<CR>", "Obsidian: Extract visually selected tet into a new note")
 
 	-- Angular: Leader -> n
