@@ -14,8 +14,31 @@ return {
 		},
 		ui = {
 			checkboxes = {
+				-- Basics
 				[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+				["/"] = { char = "󰶐", hl_group = "ObsidianRefersTo" },
 				["x"] = { char = "", hl_group = "ObsidianDone" },
+				["-"] = { char = "󰅖", hl_group = "ObsidianCancelled" },
+				[">"] = { char = "󰭹", hl_group = "ObsidianRightArrow" },
+				["<"] = { char = "󰭸", hl_group = "ObsidianLeftArrow" },
+
+				-- Extras
+				["?"] = { char = "󰋗", hl_group = "ObsidianQuestion" },
+				["!"] = { char = "󰀦", hl_group = "ObsidianImportant" },
+				["*"] = { char = "󰓎", hl_group = "ObsidianStar" },
+				['"'] = { char = "󰶶", hl_group = "ObsidianQuote" },
+				["l"] = { char = "󰋽", hl_group = "ObsidianLocation" },
+				["b"] = { char = "󰃀", hl_group = "ObsidianBookmark" },
+				["i"] = { char = "󰋽", hl_group = "ObsidianInfo" },
+				["S"] = { char = "󰠭", hl_group = "ObsidianSavings" },
+				["I"] = { char = "󰌵", hl_group = "ObsidianIdea" },
+				["p"] = { char = "", hl_group = "ObsidianProp" },
+				["c"] = { char = "", hl_group = "ObsidianCon" },
+				["f"] = { char = "󰈸", hl_group = "ObsidianFire" },
+				["k"] = { char = "󰌆", hl_group = "ObsidianKey" },
+				["w"] = { char = "󰀪", hl_group = "ObsidianWin" },
+				["u"] = { char = "󰔶", hl_group = "ObsidianUp" },
+				["d"] = { char = "󰔷", hl_group = "ObsidianDown" },
 			},
 		},
 
