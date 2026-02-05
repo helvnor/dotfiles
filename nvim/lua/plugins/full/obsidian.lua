@@ -14,7 +14,6 @@ return {
 		},
 		ui = {
 			enable = true,
-			update_done = true,
 			checkboxes = {
 				[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
 				["/"] = { char = "󰡖", hl_group = "ObsidianRefersTo" },
@@ -74,30 +73,29 @@ return {
 		require("obsidian").setup(opts)
 		local hl = vim.api.nvim_set_hl
 
-		-- Basics
-		hl(0, "ObsidianTodo", { fg = "#f8f8f2" }) -- Off-white/Cream
-		hl(0, "ObsidianRefersTo", { fg = "#a3be8c" }) -- Muted Sage
-		hl(0, "ObsidianDone", { fg = "#7fdbca", strikethrough = true }) -- Mint Green
-		hl(0, "ObsidianCancelled", { fg = "#4c566a", strikethrough = true }) -- Dimmed Slate
-		hl(0, "ObsidianRightArrow", { fg = "#81a1c1" }) -- Steel Blue
-		hl(0, "ObsidianLeftArrow", { fg = "#b48ead" }) -- Muted Purple
+		hl(0, "ObsidianTodo", { fg = "#cdd6f4" }) -- Text (Off-white)
+		hl(0, "ObsidianRefersTo", { fg = "#94e2d5" }) -- Teal
+		hl(0, "ObsidianDone", { fg = "#a6e3a1" }) -- Green (Matches checkbox)
+		hl(0, "ObsidianCancelled", { fg = "#45475a" })
+		hl(0, "ObsidianRightArrow", { fg = "#89b4fa" }) -- Blue
+		hl(0, "ObsidianLeftArrow", { fg = "#cba6f7" }) -- Mauve (Purple)
 
 		-- Extras
-		hl(0, "ObsidianQuestion", { fg = "#a3be8c" }) -- Sage Green
-		hl(0, "ObsidianImportant", { fg = "#f78c6c" }) -- Coral/Peach
-		hl(0, "ObsidianStar", { fg = "#ebcb8b" }) -- Soft Yellow
-		hl(0, "ObsidianQuote", { fg = "#a3be8c" }) -- Sage Green
-		hl(0, "ObsidianLocation", { fg = "#bf616a" }) -- Soft Red
-		hl(0, "ObsidianBookmark", { fg = "#f78c6c" }) -- Coral/Peach
-		hl(0, "ObsidianInfo", { fg = "#a3be8c" }) -- Sage Green
-		hl(0, "ObsidianSavings", { fg = "#a3be8c" }) -- Sage Green
-		hl(0, "ObsidianIdea", { fg = "#ebcb8b" }) -- Soft Yellow
-		hl(0, "ObsidianProp", { fg = "#a3be8c" }) -- Sage Green
-		hl(0, "ObsidianCon", { fg = "#f78c6c" }) -- Coral/Peach
-		hl(0, "ObsidianFire", { fg = "#bf616a" }) -- Soft Red
-		hl(0, "ObsidianKey", { fg = "#ebcb8b" }) -- Soft Yellow
-		hl(0, "ObsidianWin", { fg = "#b48ead" }) -- Muted Purple
-		hl(0, "ObsidianUp", { fg = "#a3be8c" }) -- Sage Green
-		hl(0, "ObsidianDown", { fg = "#bf616a" }) -- Soft Red
+		hl(0, "ObsidianQuestion", { fg = "#89dceb" }) -- Sky
+		hl(0, "ObsidianImportant", { fg = "#fab387" }) -- Peach
+		hl(0, "ObsidianStar", { fg = "#f9e2af" }) -- Yellow
+		hl(0, "ObsidianQuote", { fg = "#a6e3a1" }) -- Green
+		hl(0, "ObsidianLocation", { fg = "#f38ba8" }) -- Red
+		hl(0, "ObsidianBookmark", { fg = "#fab387" }) -- Peach
+		hl(0, "ObsidianInfo", { fg = "#89dceb" }) -- Sky
+		hl(0, "ObsidianSavings", { fg = "#a6e3a1" }) -- Green
+		hl(0, "ObsidianIdea", { fg = "#f9e2af" }) -- Yellow
+		hl(0, "ObsidianProp", { fg = "#a6e3a1" }) -- Green
+		hl(0, "ObsidianCon", { fg = "#fab387" }) -- Peach
+		hl(0, "ObsidianFire", { fg = "#eba0ac" }) -- Flamingo (Soft Red)
+		hl(0, "ObsidianKey", { fg = "#f9e2af" }) -- Yellow
+		hl(0, "ObsidianWin", { fg = "#cba6f7" }) -- Mauve (Purple)
+		hl(0, "ObsidianUp", { fg = "#a6e3a1" }) -- Green
+		hl(0, "ObsidianDown", { fg = "#f38ba8" }) -- Red
 	end,
 }
