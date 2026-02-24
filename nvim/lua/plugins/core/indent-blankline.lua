@@ -9,5 +9,9 @@ return {
 		indent = {
 			char = "│",
 		},
+		scope = {
+			enabled = true,
+			char = "┃",
+		},
 	},
 }
