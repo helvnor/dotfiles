@@ -26,16 +26,16 @@ Keymap("<C-k>", "<cmd>wincmd k<CR>", "Window navigation: Navigate to upper windo
 Keymap("<C-l>", "<cmd>wincmd l<CR>", "Window navigation: Navigate to right window")
 
 -- Window arrangement: Leader->CTRL-[h,j,k,l]
-Keymap("<leader><C-h>", "<C-W><S-h>", "Window arrangement: Move window left")
-Keymap("<leader><C-j>", "<C-W><S-j>", "Window arrangement: Move window down")
-Keymap("<leader><C-k>", "<C-W><S-k>", "Window arrangement: Move window up")
-Keymap("<leader><C-l>", "<C-W><S-l>", "Window arrangement: Move window right")
+Keymap("<leader><Left>", "<C-W><S-h>", "Window arrangement: Move window left")
+Keymap("<leader><Down>", "<C-W><S-j>", "Window arrangement: Move window down")
+Keymap("<leader><Up>", "<C-W><S-k>", "Window arrangement: Move window up")
+Keymap("<leader><Right>", "<C-W><S-l>", "Window arrangement: Move window right")
 
 -- Window resize: Leader->[h,j,k,l]
-Keymap("<leader>h", "<C-W>5<", "Window resize: Move window border left")
-Keymap("<leader>j", "<C-W>5+", "Window resize: Move window border down")
-Keymap("<leader>k", "<C-W>5-", "Window resize: Move window border up")
-Keymap("<leader>l", "<C-W>5>", "Window resize: Move window border right")
+Keymap("<Left>", "<C-W>3<", "Window resize: Move window border left")
+Keymap("<Down>", "<C-W>3+", "Window resize: Move window border down")
+Keymap("<Up>", "<C-W>3-", "Window resize: Move window border up")
+Keymap("<Right>", "<C-W>3>", "Window resize: Move window border right")
 
 -- Tab management: Leader->t...
 Keymap("<leader>tn", "<cmd>tabnew<cr>", "Tab management: Create new tab")
