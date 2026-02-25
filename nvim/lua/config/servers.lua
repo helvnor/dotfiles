@@ -23,11 +23,11 @@ return {
 
 	-- LINTERS --
 	linters = {
-		javascript = { "eslint_d" },
-		typescript = { "eslint_d" },
-		javascriptreact = { "eslint_d" },
-		typescriptreact = { "eslint_d" },
-		tsx = { "eslint_d" },
+		javascript = { "eslint" },
+		typescript = { "eslint" },
+		javascriptreact = { "eslint" },
+		typescriptreact = { "eslint" },
+		tsx = { "eslint" },
 		dockerfile = { "hadolint" },
 		python = { "flake8" },
 		make = { "checkmake" },
