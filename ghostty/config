@@ -1,5 +1,5 @@
 # Theme
-theme = Catppuccin Mocha
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 
 # Background blur
 background-opacity = 0.95
