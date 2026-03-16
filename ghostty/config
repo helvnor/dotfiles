@@ -1,5 +1,5 @@
 # Theme
-theme = dark:Kanagwa Dragon
+theme = Catppuccin Mocha
 
 # Background blur
 background-opacity = 0.95
@@ -21,4 +21,4 @@ command = /run/current-system/sw/bin/fish
 
 # Copy / paste
 keybind = super+c=copy_to_clipboard
-kybind = super+v=paste_from_clipboard
+keybind = super+v=paste_from_clipboard
