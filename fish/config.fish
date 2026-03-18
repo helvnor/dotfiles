@@ -137,7 +137,7 @@ end
 
 ## Fuzzy find cd
 function fcd
-    set -l dir (find ~ -type d 2>/dev/null | fzf --preview 'exa --tree --level=1 {} || ls -l {}')
+    set -l dir (find ~ -type d 2>/dev/null | fzf --preview 'eza --tree --level=1 {} || ls -l {}')
     if test $status = 0
         cd "$dir"
     end

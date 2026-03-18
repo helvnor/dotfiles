@@ -3,7 +3,7 @@ theme = Catppuccin Mocha
 
 # Background blur
 background-opacity = 0.95
-background-blur-radius = true
+background-blur-radius = 20
 
 # Font
 font-size = 11
