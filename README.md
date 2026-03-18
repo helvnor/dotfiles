@@ -4,13 +4,13 @@ Personal configuration files managed with symlinks via `make`.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
-| [Fish](fish/) | Shell — Catppuccin Mocha, vi-mode, custom prompt |
-| [Ghostty](ghostty/) | Terminal emulator — Catppuccin Mocha, transparent background |
-| [Neovim](nvim/) | Primary editor — lazy.nvim, LSP, Copilot, ~30 plugins |
-| [Tmux](tmux/) | Terminal multiplexer — Catppuccin colors, pane sync indicator |
-| [Vim](vim/) | Lightweight fallback editor — no plugins required |
+| Tool                | Description                                                   |
+| ------------------- | ------------------------------------------------------------- |
+| [Fish](fish/)       | Shell — Catppuccin Mocha, vi-mode, custom prompt              |
+| [Ghostty](ghostty/) | Terminal emulator — Catppuccin Mocha, transparent background  |
+| [Neovim](nvim/)     | Primary editor — lazy.nvim, LSP, Copilot, ~30 plugins         |
+| [Tmux](tmux/)       | Terminal multiplexer — Catppuccin colors, pane sync indicator |
+| [Vim](vim/)         | Lightweight fallback editor — no plugins required             |
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ Linked to: `~/.config/nvim`
 - **AI**: Copilot Chat integration
 - **Navigation**: Harpoon for quick file marks, Telescope for fuzzy finding
 - **Notes**: Obsidian.nvim for markdown/wiki editing
-- **Colorscheme**: Catppuccin Mocha / Kanagawa Dragon
+- **Colorscheme**: Catppuccin Mocha
 
 ---
 
