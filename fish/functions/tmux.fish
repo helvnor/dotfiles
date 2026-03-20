@@ -11,7 +11,7 @@ function tmux-dev
         tmux new-window -t $SESSION -n "OBSIDIAN" -c ~/Obsidian/main
         tmux send-keys -t $SESSION:OBSIDIAN "nvim" C-m
         
-        tmux select-window -t $SESSION:DEV
+        tmux select-window -t $SESSION:EDITOR
     end
 
     tmux attach-session -t $SESSION
