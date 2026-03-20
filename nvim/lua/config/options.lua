@@ -54,8 +54,11 @@ vim.cmd([[
   colorscheme catppuccin
 ]])
 
--- File type override for Angular components
+-- File type override for Angular & Jet components
 vim.filetype.add({
+	extension = {
+		jet = "gotmpl",
+	},
 	pattern = {
 		[".*%.component%.html"] = "htmlangular", -- Sets the filetype to `htmlangular` if it matches the pattern
 	},
