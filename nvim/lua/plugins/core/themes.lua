@@ -8,11 +8,11 @@ return {
 			cmp.setup({
 				flavour = "mocha",
 				transparent_background = true,
-				dim_inactive = {
-					enable = true,
-					shade = "dark",
-					percentage = 0.2,
-				},
+				-- dim_inactive = {
+				-- 	enable = true,
+				-- 	shade = "dark",
+				-- 	percentage = 0.2,
+				-- },
 			})
 		end,
 	},
@@ -29,7 +29,7 @@ return {
 			vim.g.everforest_current_word = "grey background"
 			vim.g.everforest_better_performance = 1
 
-			vim.g.everforest_transparent_background = 1
+			-- vim.g.everforest_transparent_background = 1
 		end,
 	},
 	{
@@ -40,9 +40,9 @@ return {
 			require("rose-pine").setup({
 				variant = "auto",
 				dark_variant = "main",
-				disable_background = true,
-				disable_float_background = true,
-				dim_inactive_windows = true,
+				-- disable_background = true,
+				-- disable_float_background = true,
+				-- dim_inactive_windows = true,
 			})
 		end,
 	},
@@ -50,14 +50,14 @@ return {
 		"olimorris/onedarkpro.nvim",
 		name = "onedarkpro",
 		priority = 1000,
-		config = function()
-			require("onedarkpro").setup({
-				options = {
-					transparency = true,
-					dim_inactive = true,
-				}
-			})
-		end,
+		-- config = function()
+		-- 	require("onedarkpro").setup({
+		-- 		options = {
+		-- 			transparency = true,
+		-- 			dim_inactive = true,
+		-- 		},
+		-- 	})
+		-- end,
 	},
 	{
 		"rebelot/kanagawa.nvim",
@@ -65,8 +65,13 @@ return {
 		priority = 1000,
 		config = function()
 			require("kanagawa").setup({
-				transparent = true,
-				dimInactive = true,
+				-- transparent = false,
+				-- dimInactive = true,
+				theme = "wave",
+				background = {
+					dark = "wave",
+					light = "lotus",
+				},
 			})
 		end,
 	},
