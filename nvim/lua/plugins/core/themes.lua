@@ -7,7 +7,7 @@ return {
 			local cmp = require("catppuccin")
 			cmp.setup({
 				flavour = "mocha",
-				transparent_background = true,
+				transparent_background = false,
 				-- dim_inactive = {
 				-- 	enable = true,
 				-- 	shade = "dark",
@@ -21,15 +21,14 @@ return {
 		name = "everforest",
 		priority = 1000,
 		config = function()
-			-- Available values: 'hard', 'medium'(default), 'soft'
-			vim.g.everforest_background = "medium"
+			vim.g.everforest_background = "hard"
 			vim.g.everforest_enable_italic = 1
 			vim.g.everforest_disable_italic_comment = 0
 			vim.g.everforest_enable_bold = 1
-			vim.g.everforest_current_word = "grey background"
+			vim.g.everforest_current_word = "bold"
 			vim.g.everforest_better_performance = 1
-
-			-- vim.g.everforest_transparent_background = 1
+			vim.g.everforest_float_style = "dim"
+			vim.g.everforest_transparent_background = 2
 		end,
 	},
 	{
