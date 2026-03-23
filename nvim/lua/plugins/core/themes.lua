@@ -1,0 +1,73 @@
+return {
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		config = function()
+			local cmp = require("catppuccin")
+			cmp.setup({
+				flavour = "mocha",
+				transparent_background = true,
+				dim_inactive = {
+					enable = true,
+					shade = "dark",
+					percentage = 0.2,
+				},
+			})
+		end,
+	},
+	{
+		"sainnhe/everforest",
+		name = "everforest",
+		priority = 1000,
+		config = function()
+			-- Available values: 'hard', 'medium'(default), 'soft'
+			vim.g.everforest_background = "medium"
+			vim.g.everforest_enable_italic = 1
+			vim.g.everforest_disable_italic_comment = 0
+			vim.g.everforest_enable_bold = 1
+			vim.g.everforest_current_word = "grey background"
+			vim.g.everforest_better_performance = 1
+
+			vim.g.everforest_transparent_background = 1
+		end,
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		priority = 1000,
+		config = function()
+			require("rose-pine").setup({
+				variant = "auto",
+				dark_variant = "main",
+				disable_background = true,
+				disable_float_background = true,
+				dim_inactive_windows = true,
+			})
+		end,
+	},
+	{
+		"olimorris/onedarkpro.nvim",
+		name = "onedarkpro",
+		priority = 1000,
+		config = function()
+			require("onedarkpro").setup({
+				options = {
+					transparency = true,
+					dim_inactive = true,
+				}
+			})
+		end,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		name = "kanagawa",
+		priority = 1000,
+		config = function()
+			require("kanagawa").setup({
+				transparent = true,
+				dimInactive = true,
+			})
+		end,
+	},
+}
