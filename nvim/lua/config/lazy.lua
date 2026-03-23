@@ -28,6 +28,6 @@ end
 
 require("lazy").setup({
 	spec = spec,
-	install = { colorscheme = { "catppuccin" } },
+	install = { colorscheme = { "everforest" } },
 	checker = { enabled = true },
 })

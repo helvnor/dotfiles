@@ -51,7 +51,7 @@ vim.opt.conceallevel = 2 -- Conceal text.
 
 -- Styling
 vim.cmd([[
-  colorscheme catppuccin
+  colorscheme everforest
 ]])
 
 -- File type override for Angular & Jet components

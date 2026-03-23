@@ -1,22 +1,5 @@
 return {
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			local cmp = require("catppuccin")
-			cmp.setup({
-				flavour = "mocha",
-				transparent_background = false,
-				-- dim_inactive = {
-				-- 	enable = true,
-				-- 	shade = "dark",
-				-- 	percentage = 0.2,
-				-- },
-			})
-		end,
-	},
-	{
 		"sainnhe/everforest",
 		name = "everforest",
 		priority = 1000,
@@ -44,19 +27,6 @@ return {
 				-- dim_inactive_windows = true,
 			})
 		end,
-	},
-	{
-		"olimorris/onedarkpro.nvim",
-		name = "onedarkpro",
-		priority = 1000,
-		-- config = function()
-		-- 	require("onedarkpro").setup({
-		-- 		options = {
-		-- 			transparency = true,
-		-- 			dim_inactive = true,
-		-- 		},
-		-- 	})
-		-- end,
 	},
 	{
 		"rebelot/kanagawa.nvim",

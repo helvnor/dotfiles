@@ -6,10 +6,10 @@ Personal configuration files managed with symlinks via `make`.
 
 | Tool                | Description                                                   |
 | ------------------- | ------------------------------------------------------------- |
-| [Fish](fish/)       | Shell — Catppuccin Mocha, vi-mode, custom prompt              |
-| [Ghostty](ghostty/) | Terminal emulator — Catppuccin Mocha, transparent background  |
+| [Fish](fish/)       | Shell — Everforest Dark Hard, vi-mode, custom prompt              |
+| [Ghostty](ghostty/) | Terminal emulator — Everforest Dark Hard, transparent background  |
 | [Neovim](nvim/)     | Primary editor — lazy.nvim, LSP, Copilot, ~30 plugins         |
-| [Tmux](tmux/)       | Terminal multiplexer — Catppuccin colors, pane sync indicator |
+| [Tmux](tmux/)       | Terminal multiplexer — Everforest Dark Hard colors, pane sync indicator |
 | [Vim](vim/)         | Lightweight fallback editor — no plugins required             |
 
 ## Prerequisites
@@ -36,7 +36,7 @@ Each tool is set up independently. `make setup` will back up any existing config
 Config: `fish/config.fish`
 Linked to: `~/.config/fish`
 
-- **Theme**: Catppuccin Mocha color palette set directly via `fish_color_*` variables
+- **Theme**: Everforest Dark Hard color palette set directly via `fish_color_*` variables
 - **Vi-mode**: enabled via `fish_vi_key_bindings`
 - **Left prompt**: CWD with deterministic per-directory color (derived from `cksum` of the physical path), host prefix only on SSH/containers
 - **Right prompt**: virtualenv name, command duration (shown when > 100 ms), git status, current time
@@ -50,7 +50,7 @@ Linked to: `~/.config/fish`
 Config: `ghostty/config`
 Linked to: `~/.config/ghostty`
 
-- **Theme**: Catppuccin Mocha
+- **Theme**: Everforest Dark Hard
 - **Background**: 95% opacity, blur radius 20
 - **Shell**: Fish (`/run/current-system/sw/bin/fish`)
 - **UI**: no titlebar, tabs hidden, window title set to `ghostty`
@@ -70,7 +70,7 @@ Linked to: `~/.config/nvim`
 - **AI**: Copilot Chat integration
 - **Navigation**: Harpoon for quick file marks, Telescope for fuzzy finding
 - **Notes**: Obsidian.nvim for markdown/wiki editing
-- **Colorscheme**: Catppuccin Mocha
+- **Colorscheme**: Everforest Dark Hard
 
 ---
 
@@ -84,8 +84,8 @@ Linked to: `~/.tmux.conf`
 - **Pane navigation**: `prefix + h/j/k/l`
 - **Pane splits**: `prefix + s` (horizontal), `prefix + v` (vertical)
 - **Window select**: `F1`–`F12` select windows 1–12 directly
-- **Sync indicator**: `prefix + y` toggles pane synchronization; active border turns red (`#f38ba8`) when synced, green (`#a6e3a1`) when not
-- **Colors**: Catppuccin Mocha hex values throughout
+- **Sync indicator**: `prefix + y` toggles pane synchronization; active border turns red (`#e67e80`) when synced, green (`#a7c080`) when not
+- **Colors**: Everforest Dark Hard hex values throughout
 - **Status bar**: top-positioned, shows user@host and date/time on the right
 
 ---
