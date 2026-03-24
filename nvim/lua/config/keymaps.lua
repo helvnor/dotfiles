@@ -78,6 +78,15 @@ Keymap("<leader>gb", "<cmd>Gitsigns blame<cr>", "Gitsigns: Show gitblame")
 Keymap("<leader>gg", "<cmd>CopilotChatToggle<cr>", "Copilot: Open chat")
 vim.api.nvim_set_keymap("i", "<S-Tab>", "copilot#Accept('<CR>')", { expr = true, silent = true })
 
+-- Git: PR Review (diffview)
+vim.keymap.set("n", "<leader>pr", function()
+	vim.ui.input({ prompt = "Base branch: ", default = "main" }, function(branch)
+		if branch then
+			vim.cmd("DiffviewOpen origin/" .. branch .. "...HEAD --imply-local")
+		end
+	end)
+end)
+
 -- Diagnostics: Leader -> a
 Keymap("<leader>aa", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Diagnostic: Show actions")
 Keymap("<leader>ad", "<cmd>lua vim.diagnostic.open_float()<cr>", "Diagnostic: Show diagnostics")
