@@ -1,5 +1,5 @@
 # Theme
-theme = Everforest Dark Hard
+theme = dark:Everforest Dark Hard,light:Everforest Light Med
 
 # Background blur
 background-opacity = 0.95
