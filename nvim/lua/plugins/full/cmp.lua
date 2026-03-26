@@ -9,6 +9,7 @@ return {
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",
+		{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -20,6 +21,7 @@ return {
 				{ name = "buffer" },
 				{ name = "path" },
 				{ name = "nvim_lsp_signature_help" },
+				{ name = "vim-dadbod-completion" },
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
