@@ -16,9 +16,6 @@ window-decoration = true
 quit-after-last-window-closed = true
 macos-option-as-alt = false
 
-# Autostart
-command = /run/current-system/sw/bin/fish
-
 # Copy / paste
 keybind = super+c=copy_to_clipboard
 keybind = super+v=paste_from_clipboard
