@@ -35,6 +35,12 @@ alias rm="trash"
 alias k="kubectl"
 abbr -a kn 'kubectl config set-context --current --namespace'
 
+## NixOS
+abbr -a nix-rebuild-zenbook 'sudo nixos-rebuild switch --flake ~/.nix#zenbook'
+abbr -a nix-rebuild-mbp     'sudo nixos-rebuild switch --flake ~/.nix#mbp14'
+abbr -a nix-update          'sudo nix flake update ~/.nix'
+abbr -a nix-clean           'sudo nix-collect-garbage -d'
+
 ## Commands to run in interactive sessions can go here
 if status is-interactive
 end
