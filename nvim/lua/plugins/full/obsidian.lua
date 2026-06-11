@@ -1,11 +1,12 @@
 return {
-	"epwalsh/obsidian.nvim",
+	"obsidian-nvim/obsidian.nvim", -- maintained community fork; epwalsh/obsidian.nvim is archived
 	version = "*",
 	event = "VeryLazy",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
 	opts = {
+		legacy_commands = false, -- use `:Obsidian <subcommand>` only
 		workspaces = {
 			{
 				name = "main",
@@ -42,13 +43,8 @@ return {
 			},
 		},
 
-		mappings = {
-			["<cr>"] = {
-				action = function()
-					return require("obsidian").util.gf_passthrough()
-				end,
-				opts = { buffer = true, expr = true },
-			},
+		checkbox = {
+			order = { " ", "x" }, -- toggle between todo/done only
 		},
 		templates = {
 			folder = "template",
@@ -63,11 +59,7 @@ return {
 			return tostring(os.time())
 		end,
 
-		preferred_link_style = "wiki",
-		wiki_link_func = "prepend_note_id",
-		follow_url_func = function(url)
-			vim.ui.open(url)
-		end,
+		link = { style = "wiki" },
 	},
 	config = function(_, opts)
 		require("obsidian").setup(opts)

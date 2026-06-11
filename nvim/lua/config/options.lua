@@ -1,7 +1,6 @@
 -- CONFIG
 vim.opt.hidden = true -- Improved buffers.
 vim.opt.fixendofline = false -- Equivalent to 'nofixeol'
-vim.opt.fixeol = false -- Equivalent to 'nofixeol'
 vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
@@ -24,7 +23,7 @@ vim.opt.smartcase = true -- Overrides 'ignorecase' if uppercase.
 
 -- FOLDING
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
 vim.opt.foldminlines = 1
@@ -35,7 +34,7 @@ vim.opt.foldcolumn = "0"
 -- UI
 vim.opt.signcolumn = "yes" -- Reserve space in the gutter
 vim.opt.showmode = false -- Hide mode from status bar
-vim.opt.laststatus = 0 -- Remove status from status bar
+vim.opt.laststatus = 2 -- Status line per window (managed by lualine)
 vim.opt.cursorline = false -- (Disabled) Draws horizontal line on active line.
 vim.opt.wildmenu = true -- Display command line complete option menu.
 vim.opt.showcmd = true -- Show inserted command.
@@ -82,7 +81,7 @@ vim.diagnostic.config({
 	virtual_lines = false,
 	float = {
 		border = "rounded",
-		source = "always",
+		source = true,
 		header = "Diagnostics",
 		wrap = true,
 	},
@@ -110,12 +109,12 @@ vim.cmd([[
 ]])
 
 -- Highlight on yank
-vim.cmd([[
-    augroup highlight_yank
-        autocmd!
-        au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200})
-    augroup END
-]])
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
+	callback = function()
+		vim.hl.on_yank({ higroup = "Visual", timeout = 200 })
+	end,
+})
 
 -- Set spell check for markdown and txt files
 vim.opt.spelllang = "en_gb"

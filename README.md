@@ -4,13 +4,13 @@ Personal configuration files managed with symlinks via `make`.
 
 ## Tools
 
-| Tool                | Description                                                   |
-| ------------------- | ------------------------------------------------------------- |
-| [Fish](fish/)       | Shell — Everforest Dark Hard, vi-mode, custom prompt              |
-| [Ghostty](ghostty/) | Terminal emulator — Everforest Dark Hard, transparent background  |
-| [Neovim](nvim/)     | Primary editor — lazy.nvim, LSP, Copilot, ~30 plugins         |
+| Tool                | Description                                                             |
+| ------------------- | ----------------------------------------------------------------------- |
+| [Fish](fish/)       | Shell — Everforest Dark Hard, vi-mode, custom prompt                    |
+| [Ghostty](ghostty/) | Terminal emulator — Everforest Dark Hard, transparent background        |
+| [Neovim](nvim/)     | Primary editor — lazy.nvim, LSP, ~30 plugins                            |
 | [Tmux](tmux/)       | Terminal multiplexer — Everforest Dark Hard colors, pane sync indicator |
-| [Vim](vim/)         | Lightweight fallback editor — no plugins required             |
+| [Vim](vim/)         | Lightweight fallback editor — no plugins required                       |
 
 ## Prerequisites
 
@@ -64,10 +64,9 @@ Config: `nvim/`
 Linked to: `~/.config/nvim`
 
 - **Plugin manager**: [lazy.nvim](https://github.com/folke/lazy.nvim), ~30 plugins
-- **Minimal mode**: auto-detected when `$SSH_TTY` is set — loads a reduced plugin set
+- **Minimal mode**: auto-detected over SSH (`$SSH_CONNECTION`) or forced with `NVIM_MINIMAL=1` — loads a reduced plugin set
 - **LSP**: configured for ~18 languages via `nvim-lspconfig`
 - **Completion**: `nvim-cmp` with LSP, buffer, path, and snippet sources
-- **AI**: Copilot Chat integration
 - **Navigation**: Harpoon for quick file marks, Telescope for fuzzy finding
 - **Notes**: Obsidian.nvim for markdown/wiki editing
 - **Colorscheme**: Everforest Dark Hard

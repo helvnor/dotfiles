@@ -1,41 +1,43 @@
-"" Keybindings 
+"" Keybindings
+" NOTE: comments must not trail :map commands — vim treats them as part of the mapping
 set mouse=
 let mapleader = " "
 map <F1> <nop>
 
-" Window arrangement: Leader->Ctrl-[h,j,k,l]
-nnoremap <C-h> <C-W>h      " Navigate to left window
-nnoremap <C-j> <C-W>j      " Navigate to lower window
-nnoremap <C-k> <C-W>k      " Navigate to upper window
-nnoremap <C-l> <C-W>l      " Navigate to right window
-
 " Window navigation: Ctrl-[h,j,k,l]
-nnoremap <leader><C-h> <C-W><S-h> " Move window left
-nnoremap <leader><C-j> <C-W><S-j> " Move window down
-nnoremap <leader><C-k> <C-W><S-k> " Move window up
-nnoremap <leader><C-l> <C-W><S-l> " Move window right
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+
+" Window arrangement: Leader->Ctrl-[h,j,k,l]
+nnoremap <leader><C-h> <C-W><S-h>
+nnoremap <leader><C-j> <C-W><S-j>
+nnoremap <leader><C-k> <C-W><S-k>
+nnoremap <leader><C-l> <C-W><S-l>
 
 " Window resize: Leader->[h,j,k,l]
-nnoremap <leader>h <C-W>5<   " Resize window left
-nnoremap <leader>j <C-W>5+   " Resize window down
-nnoremap <leader>k <C-W>5-   " Resize window up
-nnoremap <leader>l <C-W>5>   " Resize window right
+nnoremap <leader>h <C-W>5<
+nnoremap <leader>j <C-W>5+
+nnoremap <leader>k <C-W>5-
+nnoremap <leader>l <C-W>5>
 
 " Tab management: Leader->t...
-nnoremap <leader>tn :tabnew<CR>       " Create new tab
-nnoremap <leader>tc :tabclose<CR>     " Close current tab
-nnoremap <leader>t1 :tabnext 1<CR>    " Go to tab 1
-nnoremap <leader>t2 :tabnext 2<CR>    " Go to tab 2
-nnoremap <leader>t3 :tabnext 3<CR>    " Go to tab 3
-nnoremap <leader>t4 :tabnext 4<CR>    " Go to tab 4
-nnoremap <leader>t5 :tabnext 5<CR>    " Go to tab 5
-nnoremap <leader>tm1 :tabmove 1<CR>   " Move tab to position 1
-nnoremap <leader>tm2 :tabmove 2<CR>   " Move tab to position 2
-nnoremap <leader>tm3 :tabmove 3<CR>   " Move tab to position 3
-nnoremap <leader>tm4 :tabmove 4<CR>   " Move tab to position 4
-nnoremap <leader>tm5 :tabmove 5<CR>   " Move tab to position 5
-nnoremap <S-h> :tabprevious<CR>       " Go to previous tab
-nnoremap <S-l> :tabnext<CR>           " Go to next tab
+" tn = new, tc = close, t1-t5 = go to tab, tm1-tm5 = move tab, S-h/S-l = prev/next
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>tc :tabclose<CR>
+nnoremap <leader>t1 :tabnext 1<CR>
+nnoremap <leader>t2 :tabnext 2<CR>
+nnoremap <leader>t3 :tabnext 3<CR>
+nnoremap <leader>t4 :tabnext 4<CR>
+nnoremap <leader>t5 :tabnext 5<CR>
+nnoremap <leader>tm1 :tabmove 1<CR>
+nnoremap <leader>tm2 :tabmove 2<CR>
+nnoremap <leader>tm3 :tabmove 3<CR>
+nnoremap <leader>tm4 :tabmove 4<CR>
+nnoremap <leader>tm5 :tabmove 5<CR>
+nnoremap <S-h> :tabprevious<CR>
+nnoremap <S-l> :tabnext<CR>
 
 " Copy and paste to clipboard
 vnoremap <leader>cy "+y
@@ -58,7 +60,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
-set nofixeol 
+set nofixeol
 
 "" Searching
 set showmatch
@@ -88,7 +90,6 @@ syntax enable
 set termguicolors
 set background=dark
 color slate
-
 
 "" Spell check for txt and md files
 set spelllang=en_gb

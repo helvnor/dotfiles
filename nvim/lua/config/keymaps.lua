@@ -61,7 +61,7 @@ for i = 1, 9 do
 	)
 end
 
--->
+--
 -- PLUGIN KEYMAPS --
 
 -- Copy / paste: Leader -> c
@@ -75,8 +75,6 @@ Keymap("-", "<CMD>Oil --float<CR>", "Oil: Open Oil / Open parent directory")
 Keymap("<leader>gk", "<cmd>DiffviewOpen<cr>", "Diffview: Open diffview")
 Keymap("<leader>gj", "<cmd>DiffviewClose<cr>", "Diffview: Close diffview")
 Keymap("<leader>gb", "<cmd>Gitsigns blame<cr>", "Gitsigns: Show gitblame")
-Keymap("<leader>gg", "<cmd>CopilotChatToggle<cr>", "Copilot: Open chat")
-vim.api.nvim_set_keymap("i", "<S-Tab>", "copilot#Accept('<CR>')", { expr = true, silent = true })
 
 -- Git: PR Review (diffview)
 vim.keymap.set("n", "<leader>pr", function()
@@ -90,8 +88,12 @@ end)
 -- Diagnostics: Leader -> a
 Keymap("<leader>aa", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Diagnostic: Show actions")
 Keymap("<leader>ad", "<cmd>lua vim.diagnostic.open_float()<cr>", "Diagnostic: Show diagnostics")
-Keymap("<leader>aj", "<cmd>lua vim.diagnostic.goto_next()<cr>", "Diagnostic: Go to next")
-Keymap("<leader>ak", "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Diagnostic: Go to previous")
+Keymap("<leader>aj", function()
+	vim.diagnostic.jump({ count = 1, float = true })
+end, "Diagnostic: Go to next")
+Keymap("<leader>ak", function()
+	vim.diagnostic.jump({ count = -1, float = true })
+end, "Diagnostic: Go to previous")
 
 -- Telescope: Leader -> f
 Keymap("<leader>ff", telescope.find_files, "Telescope: Find files")
@@ -101,7 +103,7 @@ Keymap("<leader>fv", telescope.git_status, "Telescope: Git status")
 Keymap("<leader>fk", telescope.keymaps, "Telescope: Nvim keymaps")
 Keymap("<leader>fs", telescope.grep_string, "Telescope: Selected word")
 Keymap("<leader>fp", telescope.registers, "Telescope: Registers")
-Keymap("<leader>fc", ":TodoTelescope undo<CR>", "Telescope: Comments (TODO)")
+Keymap("<leader>fc", ":TodoTelescope<CR>", "Telescope: Comments (TODO)")
 
 -- FULL
 if not Is_minimal then
@@ -109,7 +111,7 @@ if not Is_minimal then
 	local harpoon = require("harpoon")
 
 	-- DBUI: Leader -> d
-	Keymap("<leader>d", "<cmd>:tab DBUI<cr>", "DBUI: Open diffview")
+	Keymap("<leader>d", "<cmd>tab DBUI<cr>", "DBUI: Open database UI")
 
 	-- LSP
 	Keymap("<leader>fd", telescope.lsp_definitions, "Telescope: LSP definitions")
@@ -118,19 +120,17 @@ if not Is_minimal then
 	Keymap("<leader>ft", telescope.lsp_type_definitions, "Telescope: LSP type definitions")
 
 	-- Obsidian: Leader -> o
-	Keymap("<leader>fo", ":ObsidianSearch<CR>", "Obsidian: Search with Telescope")
-	Keymap("<leader>od", ":ObsidianDailies -5 2<CR>", "Obsidian: Open Dailies")
-	Keymap("<leader>on", ":ObsidianNewFromTemplate<CR>", "Obsidian: New Note (from template)")
-	Keymap("<leader>os", ":ObsidianSearch<CR>", "Obsidian: Search")
-	Keymap("<leader>ol", ":ObsidianLink<CR>", "Obsidian: Create link")
-	Keymap("<leader>ot", ":ObsidianTags<CR>", "Obsidian: Tags")
-	Keymap("<leader>ow", ":ObsidianWorkspace<CR>", "Obsidian: Workspace")
-	Keymap("<leader>oh", ":ObsidianQuickSwitch 0<CR>", "Obsidian: Home")
-	Keymap("<leader>ob", ":ObsidianBacklink<CR>", "Obsidian: Backlinks")
-	Keymap("<leader>ox", function()
-		require("obsidian").util.toggle_checkbox({ " ", "x" })
-	end, "Obsidian: Toggle Todo/Done only")
-	Keymap("<leader>oe", ":ObsidianExtractNote<CR>", "Obsidian: Extract visually selected tet into a new note")
+	Keymap("<leader>fo", "<cmd>Obsidian search<cr>", "Obsidian: Search with Telescope")
+	Keymap("<leader>od", "<cmd>Obsidian dailies -5 2<cr>", "Obsidian: Open Dailies")
+	Keymap("<leader>on", "<cmd>Obsidian new_from_template<cr>", "Obsidian: New Note (from template)")
+	Keymap("<leader>os", "<cmd>Obsidian search<cr>", "Obsidian: Search")
+	Keymap("<leader>ol", "<cmd>Obsidian link<cr>", "Obsidian: Create link")
+	Keymap("<leader>ot", "<cmd>Obsidian tags<cr>", "Obsidian: Tags")
+	Keymap("<leader>ow", "<cmd>Obsidian workspace<cr>", "Obsidian: Workspace")
+	Keymap("<leader>oh", "<cmd>Obsidian quick_switch 0<cr>", "Obsidian: Home")
+	Keymap("<leader>ob", "<cmd>Obsidian backlinks<cr>", "Obsidian: Backlinks")
+	Keymap("<leader>ox", "<cmd>Obsidian toggle_checkbox<cr>", "Obsidian: Toggle Todo/Done only")
+	Keymap("<leader>oe", "<cmd>Obsidian extract_note<cr>", "Obsidian: Extract visually selected text into a new note")
 
 	-- Angular: Leader -> n
 	Keymap("<leader>nt", ng.goto_template_for_component, "Ng: Go to template file")

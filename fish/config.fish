@@ -1,7 +1,6 @@
 # Paths
-set --prepend PATH "$HOME/go/bin"
-set --prepend GOPATH "$HOME/go"
-
+fish_add_path -g "$HOME/go/bin"
+set -gx GOPATH "$HOME/go"
 
 ## Config
 set -x EDITOR nvim
@@ -37,20 +36,18 @@ abbr -a kn 'kubectl config set-context --current --namespace'
 
 ## NixOS
 abbr -a nix-rebuild-zenbook 'sudo nixos-rebuild switch --flake ~/.nix#zenbook'
-abbr -a nix-rebuild-mbp     'sudo nixos-rebuild switch --flake ~/.nix#mbp14'
-abbr -a nix-update          'sudo nix flake update ~/.nix'
-abbr -a nix-clean           'sudo nix-collect-garbage -d'
+abbr -a nix-rebuild-mbp 'sudo nixos-rebuild switch --flake ~/.nix#mbp14'
+abbr -a nix-update 'sudo nix flake update ~/.nix'
+abbr -a nix-clean 'sudo nix-collect-garbage -d'
 
 ## Commands to run in interactive sessions can go here
 if status is-interactive
 end
 
-
 ## Vim Mode
 function fish_user_key_bindings
-  fish_vi_key_bindings
+    fish_vi_key_bindings
 end
-
 
 ## Right Prompt
 function fish_right_prompt
@@ -86,7 +83,6 @@ function fish_right_prompt
     set_color normal
     string join " " -- $venv $duration $vcs $d
 end
-
 
 ## Left Prompt 
 function fish_prompt
@@ -140,7 +136,6 @@ function fish_prompt
     echo -n -s $prompt_host $cwd $pwd $normal ' ' $delim ' '
 end
 
-
 ## Fuzzy find cd
 function fcd
     set -l dir (find ~ -type d 2>/dev/null | fzf --preview 'eza --tree --level=1 {} || ls -l {}')
@@ -149,11 +144,9 @@ function fcd
     end
 end
 
-
 ## Start tmux
 # if type -q tmux
 #    if not test -n "$TMUX"
 #        tmux attach-session -t default; or tmux new-session -s default
 #     end
 # end
-

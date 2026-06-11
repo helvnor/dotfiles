@@ -71,6 +71,7 @@ return {
 		"javascript",
 		"tsx",
 		"html",
+		"http",
 		"markdown",
 		"dockerfile",
 		"nix",

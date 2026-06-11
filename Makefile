@@ -1,9 +1,9 @@
 all: setup
 
-.PHONY: update setup sym_echo nvim nvim_unlink vim vim_unlink tmux tmux_unlink ghostty ghostty_unlink fish fish_unlink
+.PHONY: all update setup unlink sym_echo nvim nvim_unlink vim vim_unlink tmux tmux_unlink ghostty ghostty_unlink fish fish_unlink
 setup: update sym_echo nvim vim tmux ghostty fish
 unlink: nvim_unlink vim_unlink tmux_unlink ghostty_unlink fish_unlink
-	
+
 update:
 	@echo 'Pulling latest version.'
 	@git pull
@@ -25,7 +25,7 @@ nvim:
 		ln -s $(shell pwd)/nvim $(HOME)/.config/nvim; \
 		echo '[Nvim] Done.'; \
 	fi
-	
+
 vim:
 	@if [ -L $(HOME)/.vimrc ]; then \
 		echo '[Vim] Already setup.'; \
@@ -86,7 +86,7 @@ nvim_unlink:
 	else \
 		echo '[Nvim] Not linked.'; \
 	fi
-	
+
 vim_unlink:
 	@if [ -L $(HOME)/.vimrc ]; then \
 		rm $(HOME)/.vimrc; \
@@ -118,4 +118,3 @@ fish_unlink:
 	else \
 		echo '[Fish] Not linked.'; \
 	fi
-
