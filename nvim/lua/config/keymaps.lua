@@ -3,9 +3,10 @@
 --
 -- Imports
 local telescope = require("telescope.builtin")
+local env = require("config.env")
 
 -- New keymap function
-function Keymap(input, output, desc, mode)
+local function Keymap(input, output, desc, mode)
 	local opts = {
 		noremap = true,
 		silent = true,
@@ -106,7 +107,7 @@ Keymap("<leader>fp", telescope.registers, "Telescope: Registers")
 Keymap("<leader>fc", ":TodoTelescope<CR>", "Telescope: Comments (TODO)")
 
 -- FULL
-if not Is_minimal then
+if not env.is_minimal then
 	local ng = require("ng")
 	local harpoon = require("harpoon")
 

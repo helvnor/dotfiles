@@ -1,58 +1,17 @@
-"" Keybindings
-" NOTE: comments must not trail :map commands — vim treats them as part of the mapping
-set mouse=
-let mapleader = " "
-map <F1> <nop>
 
-" Window navigation: Ctrl-[h,j,k,l]
-nnoremap <C-h> <C-W>h
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
-
-" Window arrangement: Leader->Ctrl-[h,j,k,l]
-nnoremap <leader><C-h> <C-W><S-h>
-nnoremap <leader><C-j> <C-W><S-j>
-nnoremap <leader><C-k> <C-W><S-k>
-nnoremap <leader><C-l> <C-W><S-l>
-
-" Window resize: Leader->[h,j,k,l]
-nnoremap <leader>h <C-W>5<
-nnoremap <leader>j <C-W>5+
-nnoremap <leader>k <C-W>5-
-nnoremap <leader>l <C-W>5>
-
-" Tab management: Leader->t...
-" tn = new, tc = close, t1-t5 = go to tab, tm1-tm5 = move tab, S-h/S-l = prev/next
-nnoremap <leader>tn :tabnew<CR>
-nnoremap <leader>tc :tabclose<CR>
-nnoremap <leader>t1 :tabnext 1<CR>
-nnoremap <leader>t2 :tabnext 2<CR>
-nnoremap <leader>t3 :tabnext 3<CR>
-nnoremap <leader>t4 :tabnext 4<CR>
-nnoremap <leader>t5 :tabnext 5<CR>
-nnoremap <leader>tm1 :tabmove 1<CR>
-nnoremap <leader>tm2 :tabmove 2<CR>
-nnoremap <leader>tm3 :tabmove 3<CR>
-nnoremap <leader>tm4 :tabmove 4<CR>
-nnoremap <leader>tm5 :tabmove 5<CR>
-nnoremap <S-h> :tabprevious<CR>
-nnoremap <S-l> :tabnext<CR>
-
-" Copy and paste to clipboard
-vnoremap <leader>cy "+y
-map <leader>cp "+p
-
-" Open file browser
-nnoremap - :Explore<CR>
-
-"" Buffer / Undo
+"" CONFIG
+set nocompatible
 set hidden
+set nofixeol
 set noswapfile
 set undofile
 set undodir=~/.vim/undo
+if !isdirectory(expand('~/.vim/undo'))
+    call mkdir(expand('~/.vim/undo'), 'p')
+endif
+set mouse=a
 
-"" Indent / Format
+"" INDENTATION
 set autoindent
 set smartindent
 set tabstop=4
@@ -60,38 +19,83 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
-set nofixeol
 
-"" Searching
+"" SEARCH
 set showmatch
 set incsearch
 set ignorecase
 set smartcase
+set hlsearch
+" Recursive :find (used by <leader>ff)
+set path+=**
 
-"" Folding
+"" FOLDING
+" Closest plugin-free equivalent of nvim's treesitter expr folding
 set foldmethod=syntax
 set foldlevelstart=99
+set foldnestmax=10
 
 "" UI
 set laststatus=2
-set cursorline
+set nocursorline
 set wildmenu
 set showcmd
 set nowrap
 set linebreak
 set scrolloff=2
-
-"" Numbers
 set number
 set relativenumber
-
-"" Theme
+set conceallevel=2
+set belloff=all
 syntax enable
 set termguicolors
 set background=dark
-color slate
+" Built-in stand-in for everforest
+colorscheme slate
 
-"" Spell check for txt and md files
+"" SPELL
 set spelllang=en_gb
-autocmd FileType markdown setlocal spell
-autocmd FileType text setlocal spell
+autocmd FileType markdown,text setlocal spell
+
+"" GENERAL KEYMAPS
+let mapleader = " "
+nnoremap <F1> <Nop>
+nnoremap Q <Nop>
+
+" Window navigation: Ctrl-[h,j,k,l]
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Window arrangement: Leader->[arrow]
+nnoremap <leader><Left> <C-w>H
+nnoremap <leader><Down> <C-w>J
+nnoremap <leader><Up> <C-w>K
+nnoremap <leader><Right> <C-w>L
+
+" Window resize: [arrow]
+nnoremap <Left> <C-w>3<
+nnoremap <Down> <C-w>3+
+nnoremap <Up> <C-w>3-
+nnoremap <Right> <C-w>3>
+
+" Tab management: Leader->t...
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>tx :tabclose<CR>
+for s:i in range(1, 9)
+    execute 'nnoremap <leader>' . s:i . ' :tabnext ' . s:i . '<CR>'
+    execute 'nnoremap <leader>t' . s:i . ' :tabnext ' . s:i . '<CR>'
+    execute 'nnoremap <leader>tm' . s:i . ' :tabmove ' . s:i . '<CR>'
+endfor
+
+" Copy / paste: Leader->c
+vnoremap <leader>cy "+y
+noremap <leader>cp "+p
+
+" File browser (Oil in nvim): -
+nnoremap - :Explore<CR>
+
+" Find (Telescope in nvim): Leader->f
+nnoremap <leader>ff :find<Space>
+nnoremap <leader>fb :ls<CR>:buffer<Space>

@@ -1,3 +1,5 @@
+local env = require("config.env")
+
 -- Bind <space> to leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -22,7 +24,7 @@ local spec = {
 	{ import = "plugins.core" },
 }
 
-if not Is_minimal then
+if not env.is_minimal then
 	table.insert(spec, { import = "plugins.full" })
 end
 

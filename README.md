@@ -96,9 +96,10 @@ Linked to: `~/.vimrc`
 
 No plugin manager — works out of the box with any Vim installation.
 
+- Mirrors the Neovim options and keymaps as closely as plugin-free Vim allows — window navigation/arrangement/resize, tab management, `-` file browser (netrw for Oil), `<leader>ff`/`<leader>fb` as native stand-ins for Telescope
 - 4-space tabs, `expandtab`
 - Relative line numbers
-- Persistent undo (`~/.vim/undo`)
+- Persistent undo (`~/.vim/undo`, auto-created)
 - Spell check (`en_gb`) auto-enabled for `markdown` and `text` files
 - `C-h/j/k/l` for window navigation, `Space` as leader
 - Colorscheme: `slate` (built-in)
