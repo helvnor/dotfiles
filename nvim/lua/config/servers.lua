@@ -19,6 +19,7 @@ return {
 		rust = { "rustfmt" },
 		nix = { "nixfmt" },
 		go = { "goimports" },
+		xml = { "xmllint" },
 	},
 
 	-- LINTERS --
@@ -88,5 +89,6 @@ return {
 		"bash",
 		"swift",
 		"gotmpl",
+		"xml",
 	},
 }
