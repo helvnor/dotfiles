@@ -128,7 +128,7 @@ if not env.is_minimal then
 	Keymap("<leader>ol", "<cmd>Obsidian link<cr>", "Obsidian: Create link")
 	Keymap("<leader>ot", "<cmd>Obsidian tags<cr>", "Obsidian: Tags")
 	Keymap("<leader>ow", "<cmd>Obsidian workspace<cr>", "Obsidian: Workspace")
-	Keymap("<leader>oh", "<cmd>Obsidian quick_switch 0<cr>", "Obsidian: Home")
+	Keymap("<leader>oh", "<cmd>Obsidian open 0<cr>", "Obsidian: Home")
 	Keymap("<leader>ob", "<cmd>Obsidian backlinks<cr>", "Obsidian: Backlinks")
 	Keymap("<leader>ox", "<cmd>Obsidian toggle_checkbox<cr>", "Obsidian: Toggle Todo/Done only")
 	Keymap("<leader>oe", "<cmd>Obsidian extract_note<cr>", "Obsidian: Extract visually selected text into a new note")
