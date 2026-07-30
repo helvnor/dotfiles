@@ -123,14 +123,14 @@ if not env.is_minimal then
 	-- Obsidian: Leader -> o
 	Keymap("<leader>fo", "<cmd>Obsidian search<cr>", "Obsidian: Search with Telescope")
 	Keymap("<leader>od", "<cmd>Obsidian dailies -5 2<cr>", "Obsidian: Open Dailies")
+	Keymap("<leader>oo", "<cmd>Obsidian today<cr>", "Obsidian: Open Today")
 	Keymap("<leader>on", "<cmd>Obsidian new_from_template<cr>", "Obsidian: New Note (from template)")
-	Keymap("<leader>os", "<cmd>Obsidian search<cr>", "Obsidian: Search")
-	Keymap("<leader>ol", "<cmd>Obsidian link<cr>", "Obsidian: Create link")
+	Keymap("<leader>ol", "<cmd>Obsidian link<cr>", "Obsidian: Create link", "v")
 	Keymap("<leader>ot", "<cmd>Obsidian tags<cr>", "Obsidian: Tags")
-	Keymap("<leader>ow", "<cmd>Obsidian workspace<cr>", "Obsidian: Workspace")
-	Keymap("<leader>oh", "<cmd>Obsidian open 0<cr>", "Obsidian: Home")
+	Keymap("<leader>op", "<cmd>Obsidian paste_image<cr>", "Obsidian: Paste image")
 	Keymap("<leader>ob", "<cmd>Obsidian backlinks<cr>", "Obsidian: Backlinks")
 	Keymap("<leader>ox", "<cmd>Obsidian toggle_checkbox<cr>", "Obsidian: Toggle Todo/Done only")
+	Keymap("<leader>oh", "<cmd>Obsidian quick_switch 0<cr>", "Obsidian: Home")
 	Keymap("<leader>oe", "<cmd>Obsidian extract_note<cr>", "Obsidian: Extract visually selected text into a new note")
 
 	-- Angular: Leader -> n
