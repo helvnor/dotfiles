@@ -84,7 +84,8 @@ Linked to: `~/.tmux.conf`
 - **Pane splits**: `prefix + s` (horizontal), `prefix + v` (vertical)
 - **Window select**: `F1`–`F12` select windows 1–12 directly
 - **Sync indicator**: `prefix + y` toggles pane synchronization; active border turns red (`#e67e80`) when synced, green (`#a7c080`) when not
-- **Colors**: Everforest Dark Hard hex values throughout
+- **Claude badge**: `claude-status.sh` sets `@claude` on the window Claude Code runs in, identified by the `$TMUX_PANE` its hooks inherit. The window list shows a dot — yellow (`#dbbc7f`) working, red (`#e67e80`) waiting on you, green (`#a7c080`) idle and ready, nothing when no session is running. Nix deploys the script to `~/.local/bin/claude-tmux-status` (`modules/shared/dev.nix`); the hooks that call it live in `~/.claude/settings.json`, which is per-machine and not managed by nix
+- **Colours**: Everforest Dark Hard hex values throughout
 - **Status bar**: top-positioned, shows user@host and date/time on the right
 
 ---
