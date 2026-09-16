@@ -103,6 +103,7 @@ Keymap("<leader>fb", telescope.buffers, "Telescope: Buffers")
 Keymap("<leader>fv", telescope.git_status, "Telescope: Git status")
 Keymap("<leader>fk", telescope.keymaps, "Telescope: Nvim keymaps")
 Keymap("<leader>fs", telescope.grep_string, "Telescope: Selected word")
+Keymap("<leader>fs", telescope.grep_string, "Telescope: Selected text", "v")
 Keymap("<leader>fp", telescope.registers, "Telescope: Registers")
 Keymap("<leader>fc", ":TodoTelescope<CR>", "Telescope: Comments (TODO)")
 
