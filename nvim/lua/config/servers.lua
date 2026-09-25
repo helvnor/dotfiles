@@ -20,6 +20,8 @@ return {
 		nix = { "nixfmt" },
 		go = { "goimports" },
 		xml = { "xmllint" },
+		terraform = { "tofu_fmt" },
+		["terraform-vars"] = { "tofu_fmt" },
 	},
 
 	-- LINTERS --
@@ -33,6 +35,7 @@ return {
 		python = { "flake8" },
 		make = { "checkmake" },
 		markdown = { "proselint" },
+		terraform = { "tflint" },
 	},
 
 	-- LSP --
@@ -55,6 +58,7 @@ return {
 		"templ", -- Go templating
 		"graphql", -- GraphQL
 		"sourcekit", -- Swift
+		"tofu_ls", -- OpenTofu/Terraform
 	},
 
 	-- TREESITTER --
@@ -90,5 +94,7 @@ return {
 		"swift",
 		"gotmpl",
 		"xml",
+		"hcl",
+		"terraform",
 	},
 }
